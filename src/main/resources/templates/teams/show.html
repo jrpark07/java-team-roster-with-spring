@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <title>World Curling League</title>
+</head>
+ <body>
+    <h1 th:text="${team.teamName}">Team Name</h1>
+    <dl>
+        <th:block th:each="player : ${team.players}">
+          <dt th:text="${player.position}">Position</dt>
+          <dd th:text="${player.name}">Name</dd>
+        </th:block>
+    </dl>
+  </h1>
+ </body>
+</html>
